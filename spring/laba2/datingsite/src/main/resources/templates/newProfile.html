@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Створити анкету</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/profiles}" th:object="${profile}">
+    <label for="name">Уведіть ім'я: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <input type="submit" value="Готово"/>
+</form>
+</body>
+</html>
